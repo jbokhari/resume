@@ -5,7 +5,7 @@
 	<meta name="description" content="Web developer, Designer and Problem Solver for hire.">
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="./assets/fontawesome/css/fontawesome-all.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Montserrat|Bevan|Black+Han+Sans|Candal|Hammersmith+One|Hind|IBM+Plex+Sans|Karla|Passion+One|Paytone+One|Rambla|Reem+Kufi|Righteous|Alegreya+Sans:900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|IBM+Plex+Sans" rel="stylesheet">
 	<!-- production version, optimized for size and speed -->
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 	<!-- development version, includes helpful console warnings -->
@@ -21,14 +21,14 @@
 		<header>
 			<div class="top-info">
 				<div class="contact-info">
-					<div class="ci-item phone"><span class="icon-wrap"><i class="fa fa-mobile-alt"></i></span> <a :href=phoneLink() v-html=formattedPhone() class="contact-phone">
+					<div  v-if="person.phone" class="ci-item phone"><span class="icon-wrap"><i class="fa fa-mobile-alt"></i></span> <a :href=phoneLink() v-html=formattedPhone() class="contact-phone">
 						</a></div>
-					<div class="ci-item email">
+					<div v-if="person.email" class="ci-item email">
 						<span class="icon-wrap">
 						 	<i class="fa fa-envelope"></i>
 						 </span> <a :href=mailLink()>{{ person.email }}</a>
 					</div>
-					<div class="ci-item address-info">
+					<div v-if="person.address" class="ci-item address-info">
 						<span :data-href="person.address.link">
 							<span class="icon-wrap"><i class="fa fa-map-marker-alt"></i></span>
 							<span class="address line">{{person.address.street}}</span>
@@ -53,7 +53,7 @@
 							<div class="job-details">
 								<p>{{job.location.city}}, {{job.location.state}}.
 								<span v-html=startToEnd(job.data)></span><p>
-								<h4>Contributions</h4>
+								<!-- <h4>Contributions</h4> -->
 								<ul class="contributions">
 									<li v-for="win in job.contributions" v-html=win></li>
 								</ul>
@@ -72,10 +72,10 @@
 					<p class="short-text">{{person.short_text}}</p>
 				</section>
 				<section class="skills-overview">
-					<h2>Skills Overview</h2>
+					<h2>{{skills.header}}</h2>
 					<div class="skills">
 						<ul>
-							<li v-for="skill in skills">
+							<li v-for="skill in skills.skills">
 								<span class="rating">
 									<span class="overlay" :style=skillratingCss(skill.rating)>
 										<span class="fullstar">&#9733;</span>
@@ -133,62 +133,7 @@
 </body>
 
 <script>
-(function(){
 
-	var d;
-	$.ajax({
-		url: './data.json',
-		type: 'get',
-		data: {},
-		dataType : "json",
-		success: function (data) {
-			console.log(data);
-			d = data;
-			var impressume = new Vue({
-			el: '#impressume',
-			data: d,
-			methods : {
-				formatName : function(){
-					var name = this.person.first_name + " " + this.person.last_name;
-					return (
-						name.split('').map(function(a, i){
-							console.log(a, i);
-							return "<span class='kn-" + i + "'>" + a + "</span>";
-						}).join('')
-					);
-				},
-				mailLink : function(){
-					return "mailto:" + this.person.email;
-				},
-				phoneLink : function(){
-					return "tel:" + this.person.phone;
-				},
-				formattedPhone : function(){
-					var n = this.person.phone;
-					var areacode = n.substring(0,3);
-					var fthree = n.substring(3,6);
-					var lfour = n.substring(6,10);
-					return "<span class='area-code'>" + areacode + "</span> " + "<span>" + fthree + "</span>." + "<span>" + lfour + "</span>";
-				},
-				skillratingCss : function(rating){
-					return "width: " + rating + "%;";
-				},
-				startToEnd : function(dates){
-					var html = dates.start + " &ndash; ";
-					html += (dates.end.toLowerCase() == "present") ? "<em>" : "";
-					html += dates.end;
-					html += (dates.end.toLowerCase() == "present") ? "</em>" : "";
-					return html;
-				},
-				formatProjectLinkForPrint : function(link){
-					return link.replace(/^(https?:\/\/)$/, '');
-				}
-			}
-		});
-		}
-	});
-
-})();
 	
 </script>
 </html>

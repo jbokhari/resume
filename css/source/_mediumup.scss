@@ -1,3 +1,8 @@
+.wrap {
+	padding-bottom: 3em;
+
+}
+
 header {
 	.top-info {
 
@@ -5,9 +10,7 @@ header {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-around;
-			.ci-item {
 
-			}
 		}
 	}
 }
@@ -30,18 +33,33 @@ header {
     	position: relative;
     	top: -10px;
     	height: auto;
+
     }
-    
 }
 
 .grid-wrap {
 	display: grid;
 	grid-template-columns: 190fr 100fr;
+
 	aside {
 		display: block;
-		padding: 5rem 1rem 0;
+		padding: 5rem 1rem 0rem;
+		flex-direction: row;
+
+		section{
+			max-width: none;
+			padding: 0;
+
+		}
 		.headshot.large {
 			display: block;
+
 		}
 	}
+}
+
+
+footer.bottom {
+	position: absolute;
+
 }
