@@ -3,6 +3,7 @@
 <head>
 	<title>Jameel Bokhari &#8212; Best Web Developer R&eacute;sum&eacute; Ever</title>
 	<meta name="description" content="Web developer, Designer and Problem Solver for hire.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="./assets/fontawesome/css/fontawesome-all.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|IBM+Plex+Sans" rel="stylesheet">
