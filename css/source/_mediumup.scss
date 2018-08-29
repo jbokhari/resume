@@ -1,0 +1,47 @@
+header {
+	.top-info {
+
+		.contact-info {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			.ci-item {
+
+			}
+		}
+	}
+}
+
+.headshot.large {
+	$width : 150px;
+    position: absolute;
+    top: -85px;
+    width: $width;
+    height: $width;
+    overflow: hidden;
+    border-radius: 30% 30% 30% 0%;
+    right: 3rem;
+    z-index: 900;
+    left: 50%;
+    margin-left: -($width / 2);
+
+    img {
+    	width: 100%;
+    	position: relative;
+    	top: -10px;
+    	height: auto;
+    }
+    
+}
+
+.grid-wrap {
+	display: grid;
+	grid-template-columns: 190fr 100fr;
+	aside {
+		display: block;
+		padding: 5rem 1rem 0;
+		.headshot.large {
+			display: block;
+		}
+	}
+}

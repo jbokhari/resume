@@ -1,0 +1,28 @@
+header {
+	.top-info {
+
+		.contact-info {
+			.ci-item {
+
+
+			}
+		}
+	}
+}
+
+
+.grid-wrap {
+	padding: 0 0rem 0;
+	aside {
+		padding: 0 1rem 0;
+		display: flex;
+		flex-wrap: wrap;
+
+		section {
+			flex: 1 1 auto;
+			&.tagline {
+				flex: none;
+			}
+		}
+	}
+}

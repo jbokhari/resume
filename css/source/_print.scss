@@ -1,0 +1,113 @@
+@page { margin: 0 !important; padding: 0 !important; }
+body {
+	margin: 0 !important; padding: 0 !important; 
+	* {
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+}
+.wrap {
+	border: none;
+	width: 8.5in;
+	height: 11in;
+	padding-bottom: 0;
+}
+.snail,
+.place,
+h2 {
+	color: #666 !important;
+}
+
+.online-presence {
+	display: none;
+}
+.icon-wrap {
+	color: $steelblue;
+}
+
+
+/** mediumup **/
+header {
+	.top-info {
+
+		.contact-info {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			.ci-item {
+
+			}
+		}
+		.title {
+			text-shadow: none !important;
+			h1 {
+				color: #454545;	
+			}
+		}
+	}
+}
+
+.headshot.large {
+	$width : 150px;
+    position: absolute;
+    top: -85px;
+    width: $width;
+    height: $width;
+    overflow: hidden;
+    border-radius: 30% 30% 30% 0%;
+    right: 3rem;
+    z-index: 900;
+    left: 50%;
+    margin-left: -($width / 2);
+
+    img {
+    	width: 100%;
+    	position: relative;
+    	top: -10px;
+    	height: auto;
+    	filter: grayscale(100%);
+    }
+    
+}
+
+.grid-wrap {
+	display: grid;
+	grid-template-columns: 190fr 100fr;
+	aside {
+		display: block;
+		padding: 5rem 1rem 0;
+		.headshot.large {
+			display: block;
+		}
+		.tagline {
+			.short-text {
+				border-color: #aaa;
+				
+			}
+		}
+		.skills-overview {
+			.skills {
+				.rating {
+					.overlay {
+						color: #666;
+					}
+				}
+			}
+		}
+		.projects {
+			.project-item {
+
+				a {
+					&:after {
+						display: block;
+						font-weight: normal;
+						content: attr(data-project-print);
+						margin-bottom: .5em;
+					}
+				}
+
+			}
+			
+		}
+	}
+}

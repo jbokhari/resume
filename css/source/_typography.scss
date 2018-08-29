@@ -1,0 +1,142 @@
+.amp {
+	font-family: "motiva-sans", cursive;
+	font-style: italic;
+}
+
+// // Font Imports
+// @font-face {
+//     font-family: 'Ink In The Meat';
+//     src: url('../fonts/inkitmt.woff2') format('woff2'),
+//          url('../fonts/inkitmt.woff') format('woff');
+//     font-weight: normal; 
+//     font-style: normal;
+// }
+// @font-face {
+//     font-family: 'harabara';
+//     src: url('../font/harabara_mais_black-webfont.woff2') format('woff2'),
+//          url('../font/harabara_mais_black-webfont.woff') format('woff');
+//     font-weight: normal; 
+//     font-style: normal;
+// }
+// Variables for quick font-family references
+$sans : 'Arial Narrow', sans-serif;
+// $script : 'a_little_sunshineregular', cursive;
+$bodyfont : "IBM Plex Sans", "Helvetica Neue", "Arial", sans-serif;
+$montserrat : "Montserrat", sans-serif;
+$titlefont : $montserrat;
+$sectiontitlefont : $bodyfont;
+$headersfont : "Bevan";
+$fantasy: $headersfont;
+$rounded : "Arial Rounded MT Bold", "Helvetica Rounded", "Arial", sans-serif;
+$bold : "Arial Black", "Arial Bold", "Gadget", sans-serif;
+
+@mixin textlink {
+	&,
+	&:visited {
+		font-weight: 500;
+		text-decoration: none;
+		// color:$blue;
+	}
+	&:hover {
+		// color: $lightblue;
+		text-decoration: none;
+	}
+}
+
+
+// creates extendable header syles (used further down)
+// This was added here so that header classes could be extended in other stylesheets in addition to this one
+@mixin headerSize($hnum, $font-base, $ratio : 1.14){
+	body h#{$hnum}, body .h#{$hnum} { // creates h1, .h1
+		$m : 6 - $hnum;
+		// h1 = 6 * $ratio * $font-base, h6 = $font-base
+		$size : ( pow($ratio, $m) * $font-base);
+		$size : #{max( $font-base, $size )}em;
+		font-size: $size; 
+	}
+}
+// usage (in each media query or something, do @include headerSizes(base, ratio)) to create consistent proportions
+@mixin headerSizes($font-base : 1, $ratio : NULL){
+	@for $i from 1 through 6 { 
+		// $m : 7 - $i;
+		// h1 = 6 * phi * base, h2 = 5 * phi * base, etc
+		@include headerSize($i, $font-base, $ratio);
+	}
+}
+
+// body tag used to take precedent over magento defaults
+body {
+	line-height: $sqrt2;
+	font-family: $bodyfont;
+	.fieldset {
+		> .legend {
+			font-weight: normal;
+		}
+	}
+	// give typographical elements a margin, but not if they are first-child
+	p, ol, ul {
+		margin: 1em 0;	
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	ol, ul {
+		
+	}
+	h1, h2, h3, h4, h5, h6 {
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	
+	// general header styling
+	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+		font-weight: normal;
+		font-style: normal;
+		// font-family: $headersfont;
+		// font-family: nth($allfonts, 11);
+		line-height: #{$sqrt2};
+		// margin-bottom: .67em;
+		// margin-top: #{$sqrt2}em;
+		// margin-top: 1em;
+		text-rendering: optimizeLegibility;
+		text-transform: uppercase;
+		// color: mix($black, $grey, 50%);
+
+	}
+
+	.mb-none {
+		margin-bottom: 0;
+	}
+	.mt-none {
+		margin-top: 0;
+	}
+	
+	// alignement
+	.text-align-center {text-align: center;}
+	.text-align-left {text-align: left;}
+	.text-align-right {text-align: right;}
+	// other
+	.text-transform-uppercase {text-transform: uppercase;}
+	.font-weight-bold {font-weight: bold;}
+	// font family classes
+	.ff-sans,
+	.ff-arial-narrow {
+		font-family: $sans;
+	}
+
+	.ff-arial-bold {
+		font-family: $bodyfont;
+		font-weight: bold;
+	}
+}
+
+// drop caps for a large, orange first letter
+.drop-caps::first-letter {
+	// to fallback or not to fallback?
+	// so this font sucks and has a weird line height thing going on
+	font-size: 5em;
+	line-height: .3;
+    float: left;
+    margin-left: -10px;
+}
