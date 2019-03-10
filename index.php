@@ -5,7 +5,7 @@
 	<meta name="description" content="Web developer, Designer and Problem Solver for hire.">
     <link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/style.css?n">
 	<link rel="stylesheet" href="./assets/fontawesome/css/fontawesome-all.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|IBM+Plex+Sans" rel="stylesheet">
 	<!-- production version, optimized for size and speed -->
