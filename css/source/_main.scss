@@ -162,10 +162,10 @@ header {
 			margin: 0;
 			padding: 0 2rem;
 			background: $anothergrey;
-			display: block;X
+			display: block;
 
 			.phone, .email, .address-info {
-				font-size: 1rem;
+				font-size: .9rem;
 				text-align: center;
 
 			}
@@ -199,7 +199,7 @@ header {
 	main {
 		background: $anothergrey;
 		background: $white;
-		padding: 1.5em;
+		padding:  1em 1rem 1em 2rem;
 		grid-column: 1;
 		grid-row: 1;
 
@@ -305,7 +305,7 @@ header {
 		    .short-text {
 		    	font-style: italic;
 		    	font-weight: bold;
-		    	font-size: 1.1rem;
+		    	font-size: 1rem;
 		    	border-left: 2px solid $seafoam; 
 		    	padding-left: 1em;
 		    	margin-left: 1em;
@@ -314,6 +314,14 @@ header {
 		}
 		.skills-overview {
 			.skills {
+				li {
+					display: inline-block;
+					background: rgba(255,255,255,.3);
+					padding: 2px 4px;
+					margin: 0 4px 2px 0;
+					border-radius: 3px;
+
+				}
 				.rating {
 					width: auto;
 					display: inline-block;

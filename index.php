@@ -77,7 +77,7 @@
 					<div class="skills">
 						<ul>
 							<li v-for="skill in skills.skills">
-								<span class="rating">
+								<!-- <span class="rating">
 									<span class="overlay" :style=skillratingCss(skill.rating)>
 										<span class="fullstar">&#9733;</span>
 										<span class="fullstar">&#9733;</span>
@@ -92,7 +92,7 @@
 										<span class="hollowstar">&#9734;</span>
 										<span class="hollowstar">&#9734;</span>
 									</span>
-								</span>
+								</span> -->
 								<span class="skill-name" v-html="skill.name"></span>
 							</li>
 						</ul>
