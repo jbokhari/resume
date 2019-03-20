@@ -4,3 +4,5 @@ vendor/yootheme/theme/modules/**/*
 *.sublime-workspace
 node_modules/**/*
 data.json
+images/**/*
+!images/avatar.png

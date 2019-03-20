@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Jameel Bokhari &#8212; Best Web Developer R&eacute;sum&eacute; Ever</title>
+	<title>Jameel Bokhari &#8212; Powerful R&eacute;sum&eacute;</title>
 	<meta name="description" content="Web developer, Designer and Problem Solver for hire.">
     <link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -128,7 +128,9 @@
 			</aside>
 		</div>
 		<footer class="bottom">
-			<a :href="source.repo_link">{{source.repo_text}} {{source.repo_link}}</a>
+			<a class="web-only" :href="source.web.repo_link">{{source.web.repo_text}} {{source.web.repo_link}}</a>
+			<span class="print-only">{{source.print.repo_text}}</span>
+			<span class="print-only"></span>
 		</footer>
 	</div> <!-- eof #impressume -->
 	

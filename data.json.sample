@@ -1,0 +1,122 @@
+{
+	"person": {
+		"first_name"     : "Jaime",
+		"last_name"      : "Andrade",
+		"email"          : "cooldudeordudette@example.com",
+		"phone"          : "5205551234",
+		"address"        : {
+			"street" : "1616 E 18 St",
+			"city"   : "Kansas City",
+			"state"  : "MO",
+			"zip"    : "64108",
+			"link"   : "https://goo.gl/maps/a3DukvA5FZH2"
+		},
+		"page_headline"  : "Web Developer and Designer",
+		"short_text"     : "The best person for your team!",
+		"headshot" : {
+			"src" : "./images/avatar.png",
+			"alt" : "Picture of your perfect candidate for that one Web Developer opening."
+		}
+	},
+	"skills" : {
+		"header" : "Strengths",
+		"skills" : [
+			{
+				"name" : "PHP",
+				"rating" : 92
+			},
+			{
+				"name" : "Python",
+				"rating" : 80
+			},
+			{
+				"name": "JavaScript",
+				"rating" : 80
+			},
+			{
+				"name" : "CSS",
+				"rating" : 100
+			},
+			{
+				"name" : "React",
+				"rating" : 60
+			},
+			{
+				"name" : "NGINX",
+				"rating" : 80
+			},
+			{
+				"name" : "Linux",
+				"rating" : 80
+			},
+			{
+				"name" : "MySql",
+				"rating" : 60
+			},
+			{
+				"name" : "WordPress",
+				"rating" : 95
+			},
+			{
+				"name" : "Magento 2",
+				"rating" : 92
+			}
+		]
+	},
+	"work_history" : [
+		{
+			"role" : "Resume Drafter",
+			"company" : "Web People inc.",
+			"location" : {
+				"city" : "Kansas City",
+				"state" : "MO"
+			},
+			"data" : {
+				"start" : "Summer 1969",
+				"end"   : "Current"
+			},
+			"contributions" : [
+				"Efficiently used bathroom breaks to browse instagram.",
+				"Brought more food to the breakroom than I ate.",
+				"Administered the difficult things."
+			]
+		}
+	], 
+	"projects" : {
+		"header" : "Projects",
+		"builds" : [
+			{
+				"name": "Cool Website",
+				"link": "http://example.com",
+				"type": "website",
+				"short_description" : "A cool website I designed",
+				"roles" : [ "Developer", "Designer" ]	
+			}
+		] 
+	},
+	"online_presence" :{
+		"header" : "Online",
+		"links" : [
+			{
+				"href" : "https://example.com/",
+				"icon" : "stack-overflow",
+				"title" : "Stack Overflow"
+			}
+		]
+	},
+	"references" : {
+		"header" : "References",
+		"text" : "Professional references are available on request.",
+		"references" : [
+		]
+	},
+	"source" : {
+		"web" : {
+			"repo_text" : "See my resume's source code: ",
+			"repo_link" : "https://git.example.com/resume"
+		},
+		"print" : {
+			"repo_text" : "https://resume.example.com"
+		}
+	}
+}

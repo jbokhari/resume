@@ -13,166 +13,183 @@ body {
 
 	}
 }
-.wrap {
-	border: none;
-	width: 8.5in;
-	height: 11in;
-	padding-bottom: 0;
 
-}
-.grid-wrap main .job-list .job-item{
-	.job-header{
-		.snail,
-		.place,
-		.role,
-		h3 {
-			color: #666 !important;
-			font-size: 1rem;
+#impressume {
 
-		}
+	&.wrap {
+		border: none;
+		width: 8.5in;
+		height: 10in;
+		padding-bottom: 0;
+
 	}
-	.job-details {
-		p {
-			margin-bottom: .5em;
+	.grid-wrap main .job-list .job-item {
+		.snail{
+			font-size: .6rem !important;
 		}
-	}
-}
-
-.online-presence {
-	display: none;
-
-}
-
-
-header {
-	.top-info {
-		padding-top: 2em;
-
-		.contact-info {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-around;
-
-			.phone, .email, .address-info {
-				font-size: .8rem;
-				text-align: center;
+		h3.job-header{
+			.place,
+			.role,
+			 {
+				color: #666 !important;
+				font-size: .8rem !important;
 
 			}
-
 		}
-		.title {
-			text-shadow: none !important;
-			padding-bottom: 1rem;
-			h1 {
-				color: #111;
-				font-size: 2.3rem;
-
-			}
-			.subheader {
-				font-weight: normal;
-				color: #666;
-
+		.job-details {
+			p {
+				margin-bottom: .5em;
 			}
 		}
 	}
-}
 
-.headshot.large {
-	$width : 150px;
-    position: absolute;
-    top: -85px;
-    width: $width;
-    height: $width;
-    overflow: hidden;
-    border-radius: 30% 30% 30% 0%;
-    right: 3rem;
-    z-index: 900;
-    left: 50%;
-    margin-left: -($width / 2);
+	.online-presence {
+		display: none;
 
-    img {
-    	width: 100%;
-    	position: relative;
-    	top: -10px;
-    	height: auto;
-    	filter: grayscale(100%);
+	}
 
-    }
-}
-.grid-wrap {
-	display: grid;
-	grid-template-columns: 190fr 100fr;
 
-	main {
-		padding:  0em 1rem 1em 2rem;
-		.job-list {
-			> div,
-			.job-item {
-				padding: 0;
-				margin: 0;
+	header {
+		.top-info {
+			padding-top: 2em;
+
+			.contact-info {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+
+				.phone, .email, .address-info {
+					font-size: .8rem;
+					text-align: center;
+
+				}
+
 			}
-			.job-item {
-			
-				.job-details {
-					border-color: #aaa;
+			.title {
+				text-shadow: none !important;
+				padding-bottom: 1rem;
+				h1 {
+					color: #111;
+					font-size: 2.3rem;
+
+				}
+				.subheader {
+					font-weight: normal;
+					color: #666;
 
 				}
 			}
 		}
 	}
 
-	aside {
-		display: block;
-		padding: 5rem 1rem 0;
+	.headshot.large {
+		$width : 150px;
+	    position: absolute;
+	    top: -85px;
+	    width: $width;
+	    height: $width;
+	    overflow: hidden;
+	    border-radius: 30% 30% 30% 0%;
+	    right: 3rem;
+	    z-index: 900;
+	    left: 50%;
+	    margin-left: -($width / 2);
 
-		.headshot.large {
-			display: block;
+	    img {
+	    	width: 100%;
+	    	position: relative;
+	    	top: -10px;
+	    	height: auto;
+	    	filter: grayscale(100%);
 
+	    }
+	}
+	.grid-wrap {
+		display: grid;
+		grid-template-columns: 190fr 100fr;
+
+		main {
+			padding:  0em 1rem 1em 2rem;
+			.job-list {
+				> div,
+				.job-item {
+					padding: 0;
+					margin: 0;
+				}
+				.job-item {
+				
+					.job-details {
+						border-color: #aaa;
+
+					}
+				}
+			}
 		}
-		.tagline {
-			.short-text {
-				border-color: #666;
-				font-weight: normal;
+
+		aside {
+			display: block;
+			padding: 5rem 1rem 0;
+
+			.headshot.large {
+				display: block;
+
+			}
+			.tagline {
+				.short-text {
+					border-color: #666;
+					font-weight: normal;
+					
+				}
+			}
+
+			.skills-overview {
+				.skills {
+					.rating {
+						.overlay {
+							color: #aaa !important;
+
+						}
+					}
+				}
+			}
+			.projects {
+				.project-item {
+					color: #333;
+
+					a {
+						&:after {
+							display: block;
+							color: #666;
+							font-weight: normal;
+							content: attr(data-project-print);
+							margin-bottom: .5em;
+
+						}
+					}
+
+				}
 				
 			}
 		}
-
-		.skills-overview {
-			.skills {
-				.rating {
-					.overlay {
-						color: #aaa !important;
-
-					}
-				}
-			}
-		}
-		.projects {
-			.project-item {
-				color: #333;
-
-				a {
-					&:after {
-						display: block;
-						color: #666;
-						font-weight: normal;
-						content: attr(data-project-print);
-						margin-bottom: .5em;
-
-					}
-				}
-
-			}
-			
-		}
 	}
-}
 
-footer.bottom {
-	padding-top: 5em;
+	footer.bottom {
+		.print-only {
+			display: block;
+		}
+		.web-only {
+			display: none;
+		}
+		padding-top: 0em;
+		position: relative;
+		background: none;
+   		color: black;
+   		visibility: visible;
+		a {
+			display: block;
+			visibility: visible;
+		 	color: #666;
 
-	a {
-	 	color: #666;
-
-	 }
+		 }
+	}
 }
