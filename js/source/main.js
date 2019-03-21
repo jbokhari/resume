@@ -32,7 +32,7 @@
 					var areacode = n.substring(0,3);
 					var fthree = n.substring(3,6);
 					var lfour = n.substring(6,10);
-					return "<span class='area-code'>" + areacode + "</span> " + "<span>" + fthree + "</span>." + "<span>" + lfour + "</span>";
+					return "<span class='area-code'>" + areacode + "</span>." + "<span>" + fthree + "</span>." + "<span>" + lfour + "</span>";
 				},
 				skillratingCss : function(rating){
 					return "width: " + rating + "%;";
