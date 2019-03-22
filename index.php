@@ -53,7 +53,7 @@
 						<div class="job-item">
 							<h3 class="job-header "><span class="role" v-html=job.role></span> <span class="snail">@</span> <span class="place" v-html=job.company></span></h3>
 							<div class="job-details">
-								<p>{{job.location.city}}, {{job.location.state}}.
+								<p class="when-and-where">{{job.location.city}}, {{job.location.state}}.
 								<span v-html=startToEnd(job.data)></span><p>
 								<!-- <h4>Contributions</h4> -->
 								<ul class="contributions">
@@ -121,7 +121,7 @@
 					<h2>{{online_presence.header}}</h2>
 					<ul>
 						<li v-for="link in online_presence.links">
-							<a :href="link.href" rel="nofollow" target="_blank"><i :class="'fab fa-' + link.icon"></i>{{link.title}}</a>
+							<a :href="link.href" :data-website-print="link.print" rel="nofollow" target="_blank"><i :class="'fab fa-' + link.icon"></i>{{link.title}}</a>
 						</li>
 					</ul>
 				</section>

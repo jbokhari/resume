@@ -7,7 +7,7 @@ body {
 	margin: 0 !important; padding: 0 !important;
 
 	* {
-		color: #333;
+		// color: #333;
 		box-shadow: none !important;
 		text-shadow: none !important;
 
@@ -28,12 +28,16 @@ body {
 			font-size: .6rem !important;
 		}
 		h3.job-header{
-			.place,
-			.role,
-			 {
-				color: #666 !important;
-				font-size: .8rem !important;
+			.role{
+				color: #111 !important;
+			}
+			.place{
+				color: #447cac !important;
+			}
 
+			.place,
+			.role{
+				font-size: .8rem !important;
 			}
 		}
 		.job-details {
@@ -44,7 +48,17 @@ body {
 	}
 
 	.online-presence {
-		display: none;
+		// display: none;
+		a {
+			&:after {
+				display: block;
+				color: #666;
+				font-weight: normal;
+				content: attr(data-website-print);
+				margin-bottom: .5em;
+
+			}
+		}
 
 	}
 
@@ -69,7 +83,13 @@ body {
 				text-shadow: none !important;
 				padding-bottom: 1rem;
 				h1 {
-					color: #111;
+					&:before{
+						display: none;
+					}
+					span.kerning {
+						color: #000;
+						// color: $seafoam !important;
+					}
 					font-size: 2.3rem;
 
 				}
@@ -107,7 +127,10 @@ body {
 	.grid-wrap {
 		display: grid;
 		grid-template-columns: 190fr 100fr;
-
+	
+		h2 {
+			color: #1d5474;
+		}
 		main {
 			padding:  0em 1rem 1em 2rem;
 			.job-list {
@@ -119,7 +142,12 @@ body {
 				.job-item {
 				
 					.job-details {
-						border-color: #aaa;
+						.when-and-where span em,
+						.when-and-where span,
+						.when-and-where {
+							color: #666;
+						}
+						// border-color: #aaa;
 
 					}
 				}
@@ -137,7 +165,7 @@ body {
 			.tagline {
 				.short-text {
 					font-size: .9rem;
-					border-color: #666;
+					// border-color: #666;
 					font-weight: normal;
 					
 				}
@@ -160,7 +188,7 @@ body {
 					a {
 						&:after {
 							display: block;
-							color: #666;
+							color: #555;
 							font-weight: normal;
 							content: attr(data-project-print);
 							margin-bottom: .5em;

@@ -17,7 +17,7 @@
 					var name = this.person.first_name + " " + this.person.last_name;
 					return (
 						name.split('').map(function(a, i){
-							return "<span class='kn-" + i + "'>" + a + "</span>";
+							return "<span class='kerning kn-" + i + "'>" + a + "</span>";
 						}).join('')
 					);
 				},
